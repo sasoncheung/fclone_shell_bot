@@ -512,7 +512,7 @@ bot.command("fq", function (msg, reply, next) {
   msg.editor = null;
 
 // 一键快速转存"/fq" command that should be used
-  var args = "/root/fclone_shell_bot/script/fqcopy.sh";
+  var args = "/root/fcs/script/fqcopy.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -531,7 +531,7 @@ bot.command("fqa", function (msg, reply, next) {
   msg.editor = null;
 
 // 一键快速序列转存"/fqa" command that should be used
-  var args = "/root/fclone_shell_bot/script/fqcopy_a.sh";
+  var args = "/root/fcs/script/fqcopy_a.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -550,7 +550,7 @@ bot.command("fp", function (msg, reply, next) {
   msg.editor = null;
 
 // 点对点转存"/fp" command that should be used
-  var args = "/root/fclone_shell_bot/script/fpcopy.sh";
+  var args = "/root/fcs/script/fpcopy.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -569,7 +569,7 @@ bot.command("fb", function (msg, reply, next) {
   msg.editor = null;
 
 // 全盘备份"/fb" command that should be used
-  var args = "/root/fclone_shell_bot/script/fbcopy.sh";
+  var args = "/root/fcs/script/fbcopy.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -588,7 +588,7 @@ bot.command("fs", function (msg, reply, next) {
   msg.editor = null;
 
 // 定向size查询"/fs" command that should be used
-  var args = "/root/fclone_shell_bot/script/fsize.sh";
+  var args = "/root/fcs/script/fsize.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -607,7 +607,7 @@ bot.command("fsingle", function (msg, reply, next) {
   msg.editor = null;
 
 // 自动整理"/fsingle" command that should be used
-  var args = "/root/fclone_shell_bot/script/fsingle.sh";
+  var args = "/root/fcs/script/fsingle.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -626,7 +626,7 @@ bot.command("fd", function (msg, reply, next) {
   msg.editor = null;
 
 // 定向查重"/fd" command that should be used
-  var args = "/root/fclone_shell_bot/script/fdedup.sh";
+  var args = "/root/fcs/script/fdedup.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -645,7 +645,7 @@ bot.command("fc", function (msg, reply, next) {
   msg.editor = null;
 
 // 定向比对"/fc" command that should be used
-  var args = "/root/fclone_shell_bot/script/fcheck.sh";
+  var args = "/root/fcs/script/fcheck.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
@@ -664,7 +664,7 @@ bot.command("fcl", function (msg, reply, next) {
   msg.editor = null;
 
 // 清空回收站"/fcl" command that should be used
-  var args = "/root/fclone_shell_bot/script/fcleanup.sh";
+  var args = "/root/fcs/script/fcleanup.sh";
   msg.context.command = new Command(reply, msg.context, args);
   msg.context.command.on("exit", function() {
     msg.context.command = null;
