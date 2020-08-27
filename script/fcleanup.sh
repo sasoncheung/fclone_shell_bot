@@ -9,7 +9,7 @@
 # Version: final
 #=============================================================
 
-source /root/fclone_shell_bot/myfc_config.ini
+source /root/fcs/myfc_config.ini
 clear
 read -p "请输入要清空回收站的盘ID==>" link
 if [ -z "$link" ] ; then
