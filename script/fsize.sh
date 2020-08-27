@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fcp
+# https://github.com/cgkings/fcs
 # File Name: fsize.sh
 # Author: cgking
 # Created Time : 2020.7.8
@@ -9,7 +9,7 @@
 # Version: final
 #=============================================================
 
-source /root/fcp/myfc_config.ini
+source /root/fcs/myfc_config.ini
 
 #三种模式，在myfc_config.ini中选择size_mode
 #其中：1#，ls基础模式，2#，ls列表模式，3#，size基础模式,3#size列表模式
