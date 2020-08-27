@@ -17,7 +17,7 @@ Sason自改自用版,感谢原作者cgkings!
 <summary>步骤一：克隆库/赋予脚本权限/运行一键安装脚本</summary>
  
 ```
-cd /root && git clone https://github.com/sasoncheung/fcs.git && chmod -R 777 /root/fcs && mv /root/fcs/fcshell.sh /root && /root/fcshell.sh
+cd /root && git clone https://github.com/sasoncheung/fcs.git && chmod -R 777 /root/fcs && mv /root/fcs/fcs.sh /root && /root/fcs.sh
 ```
 
 </details>
