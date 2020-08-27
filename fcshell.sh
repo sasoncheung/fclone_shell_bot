@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fclone_shell_bot
+# https://github.com/cgkings/fcs
 # File Name: fc_shellbot.sh
 # Author: cgking
 # Created Time : 2020.7.8--2020.7.12
@@ -9,7 +9,7 @@
 # Version: final
 #=============================================================
 
-source ~/fclone_shell_bot/myfc_config.ini
+source ~/fcs/myfc_config.ini
 sh_ver="Final"
 Green_font_prefix="\033[32m"
 Red_font_prefix="\033[31m"
@@ -40,15 +40,15 @@ install_exp() {
 # ★★★安装更新shellbot-已完成★★★
 install_shellbot() {
     cd ~
-    botstats=`find ~/fclone_shell_bot`
+    botstats=`find ~/fcs`
     if [[ "$botstats" =~ "no such file" ]] ; then
-    rm -rf ~/fclone_shell_bot
+    rm -rf ~/fcs
     git clone https://git.io/JJmMw
-    cd ~/fclone_shell_bot
+    cd ~/fcs
     npm install
     echo -e "shellbot已安装更新为最新版本" && exit
     else
-    cd ~/fclone_shell_bot
+    cd ~/fcs
     git pull
     npm install
     echo -e "shellbot已安装更新为最新版本" 
@@ -61,7 +61,7 @@ install_clone() {
     cd ~
     curl https://rclone.org/install.sh | sudo bash -s beta
     wget -qO- https://git.io/gclone.sh
-    wget -N https://github.com/cgkings/fclone_shell_bot/raw/master/fclone/fclone.zip
+    wget -N https://github.com/cgkings/fcs/raw/master/fclone/fclone.zip
     unzip fclone.zip
     mv fclone /usr/bin
     chmod +x /usr/bin/fclone
@@ -72,16 +72,16 @@ install_clone() {
 install_script() {
     clear
     echo "【fclone转存脚本】安装"
-    chmod -R 777 ~/fclone_shell_bot/script/
-    echo -e "alias fq="~/fclone_shell_bot/script/fqcopy.sh""  >> /root/.bashrc
-    echo -e "alias fqa="~/fclone_shell_bot/script/fqcopy_a.sh""  >> /root/.bashrc
-    echo -e "alias fp="~/fclone_shell_bot/script/fpcopy.sh""  >> /root/.bashrc
-    echo -e "alias fb="~/fclone_shell_bot/script/fbcopy.sh""  >> /root/.bashrc
-    echo -e "alias fs="~/fclone_shell_bot/script/fsize.sh""  >> /root/.bashrc
-    echo -e "alias fsort="~/fclone_shell_bot/script/fsort.sh""  >> /root/.bashrc
-    echo -e "alias fd="~/fclone_shell_bot/script/fdedup.sh""  >> /root/.bashrc
-    echo -e "alias fc="~/fclone_shell_bot/script/fcheck.sh""  >> /root/.bashrc
-    echo -e "alias fcl="~/fclone_shell_bot/script/fcleanup.sh""  >> /root/.bashrc
+    chmod -R 777 ~/fcs/script/
+    echo -e "alias fq="~/fcs/script/fqcopy.sh""  >> /root/.bashrc
+    echo -e "alias fqa="~/fcs/script/fqcopy_a.sh""  >> /root/.bashrc
+    echo -e "alias fp="~/fcs/script/fpcopy.sh""  >> /root/.bashrc
+    echo -e "alias fb="~/fcs/script/fbcopy.sh""  >> /root/.bashrc
+    echo -e "alias fs="~/fcs/script/fsize.sh""  >> /root/.bashrc
+    echo -e "alias fsort="~/fcs/script/fsort.sh""  >> /root/.bashrc
+    echo -e "alias fd="~/fcs/script/fdedup.sh""  >> /root/.bashrc
+    echo -e "alias fc="~/fcs/script/fcheck.sh""  >> /root/.bashrc
+    echo -e "alias fcl="~/fcs/script/fcleanup.sh""  >> /root/.bashrc
     echo -e "alias fcshell="~/fcshell.sh""  >> /root/.bashrc
     echo -e "alias avdc='cd /home/gdrive/test && AV_Data_Capture'"  >> /root/.bashrc
     source /root/.bashrc
@@ -102,9 +102,9 @@ install_script() {
 # ★★★运行bot-已完成★★★
 run_bot() {
     clear
-    tmux new -s shellbot -d
-    tmux send -t "shellbot" 'cd ~/fclone_shell_bot && node server' Enter
-    echo -e "bot服务已在tmux后台窗口shellbot内启动，可直接在TG上使用，也可VPS使用“ tmux a -t shellbot”查看启动状况"
+    tmux new -s fcs -d
+    tmux send -t "fcs" 'cd ~/fcs && node server' Enter
+    echo -e "bot服务已在tmux后台窗口shellbot内启动，可直接在TG上使用，也可VPS使用“ tmux a -t fcs”查看启动状况"
     exit
 }
 # ★★★运行脚本-已完成★★★
@@ -122,28 +122,28 @@ run_script() {
 # ★★★停止bot-已完成★★★
 stop_bot() {
     clear
-    tmux kill-session -t shellbot
+    tmux kill-session -t fcs
     echo -e "bot服务已停止"
     exit
 }
 # ★★★重启bot-已完成★★★
 restart_bot() {
     clear
-    tmux kill-session -t shellbot
-    tmux new -s shellbot -d
-    tmux send -t "shellbot" 'cd ~/fclone_shell_bot && node server' Enter
-    echo -e "bot服务已在tmux后台窗口shellbot内启动，可直接在TG上使用，也可VPS使用"tmux a -t shellbot"查看启动状况"
+    tmux kill-session -t fcs
+    tmux new -s fcs -d
+    tmux send -t "fcs" 'cd ~/fcs && node server' Enter
+    echo -e "bot服务已在tmux后台窗口shellbot内启动，可直接在TG上使用，也可VPS使用"tmux a -t fcs"查看启动状况"
     exit
 }
 # ★★★查看bot配置-已完成★★★
 view_bot() {
     clear
-    cat /root/fclone_shell_bot/config.example.json
+    cat /root/fcs/config.example.json
 }
 # ★★★编辑配置bot-已完成★★★
 set_bot() {
     clear
-    nano /root/fclone_shell_bot/config.example.json
+    nano /root/fcs/config.example.json
 }
 # ★★★查看rclone配置-已完成★★★
 view_conf() {
@@ -201,7 +201,7 @@ view_clone() {
 # ★★★编辑转存参数-已完成★★★
 set_clone() {
     clear
-    nano /root/fclone_shell_bot/myfc_config.ini
+    nano /root/fcs/myfc_config.ini
 }
 
 # ★★★主目录-已完成★★★
@@ -276,7 +276,7 @@ case "$num" in
     set_conf
     ;;
 13)
-    cat ~/fclone_shell_bot/bot_commands.txt
+    cat ~/fcs/bot_commands.txt
     ;;
 14)
     view_clone
