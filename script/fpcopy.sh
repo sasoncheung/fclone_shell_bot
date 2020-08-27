@@ -9,7 +9,7 @@
 # Version: final
 #=============================================================
 
-source /root/fclone_shell_bot/myfc_config.ini
+source /root/fcs/myfc_config.ini
 clear
 read -p "【点对点模式】请输入from ID==>" link1
 link1=${link1#*id=};link1=${link1#*folders/};link1=${link1#*d/};link1=${link1%?usp*}
