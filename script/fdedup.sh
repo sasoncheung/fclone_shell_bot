@@ -9,8 +9,8 @@
 # Version: final
 #=============================================================
 
-source /root/fclone_shell_bot/myfc_config.ini
-: > /root/fclone_shell_bot/log/fdedupe.log
+source /root/fcs/myfc_config.ini
+: > /root/fcs/log/fdedupe.log
 clear
 read -p "请输入要查重的链接==>" link
 if [ -z "$link" ] ; then
