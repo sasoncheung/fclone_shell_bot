@@ -43,7 +43,7 @@ install_shellbot() {
     botstats=`find ~/fcs`
     if [[ "$botstats" =~ "no such file" ]] ; then
     rm -rf ~/fcs
-    git clone https://git.io/JJmMw
+    git clone https://github.com/sasoncheung/fcs
     cd ~/fcs
     npm install
     echo -e "shellbot已安装更新为最新版本" && exit
@@ -61,7 +61,7 @@ install_clone() {
     cd ~
     curl https://rclone.org/install.sh | sudo bash -s beta
     wget -qO- https://git.io/gclone.sh
-    wget -N https://github.com/cgkings/fcs/raw/master/fclone/fclone.zip
+    wget -N https://github.com/sasoncheung/fcs/raw/master/fclone/fclone.zip
     unzip fclone.zip
     mv fclone /usr/bin
     chmod +x /usr/bin/fclone
