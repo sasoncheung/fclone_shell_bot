@@ -9,7 +9,7 @@
 # Version: final
 #=============================================================
 
-source /root/fclone_shell_bot/myfc_config.ini
+source /root/fcs/myfc_config.ini
 clear
 read -p "【极速转存模式】，请输入分享链接==>" link
 link=${link#*id=};link=${link#*folders/};link=${link#*d/};link=${link%?usp*}
