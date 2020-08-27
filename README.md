@@ -1,5 +1,7 @@
 # fclone shell bot V2.0
 
+Sason自改自用版,感谢原作者cgkings!
+
 [教程FAQ](https://git.io/JJZ3E)       [原作教程](https://git.io/JJZ30)        [脚本1.0手动教程](https://git.io/JJZ34)
 
 `shellbot`可以在TG上调动运行VPS命令，本脚本仅是shellbot的一种google drive转存应用!
@@ -15,7 +17,7 @@
 <summary>步骤一：克隆库/赋予脚本权限/运行一键安装脚本</summary>
  
 ```
-cd /root && git clone https://github.com/cgkings/fclone_shell_bot.git && chmod -R 777 /root/fclone_shell_bot && mv /root/fclone_shell_bot/fcshell.sh /root && /root/fcshell.sh
+cd /root && git clone https://github.com/sasoncheung/fcs.git && chmod -R 777 /root/fcs && mv /root/fcs/fcshell.sh /root && /root/fcshell.sh
 ```
 
 </details>
@@ -53,9 +55,9 @@ cd /root && git clone https://github.com/cgkings/fclone_shell_bot.git && chmod -
 
   4. 点选**5 启动 bot**
 
-     此默认为后台启动bot，当前看不到运行的，想看?`tmux a -t shellbot`去后台看吧
+     此默认为后台启动bot，当前看不到运行的，想看?`tmux a -t fcs`去后台看吧
      
-     因为原作问题，第一次点选启动，请`tmux a -t shellbot`到后台完成以下操作：
+     因为原作问题，第一次点选启动，请`tmux a -t fcs`到后台完成以下操作：
      
      4.1 填写一下BOT token
      
