@@ -86,7 +86,7 @@ install_script() {
     echo -e "alias avdc='cd /home/gdrive/test && AV_Data_Capture'"  >> /root/.bashrc
     source /root/.bashrc
     echo -e "已完成安装，并设置系统级脚本别名"
-    echo -e "输入fcshell  安装配置脚本"
+    echo -e "输入fcs  安装配置脚本"
     echo -e "输入fq       启动  极速转存"
     echo -e "输入fqa      启动  极速转存_序列"
     echo -e "输入fp       启动  p2p转存"
