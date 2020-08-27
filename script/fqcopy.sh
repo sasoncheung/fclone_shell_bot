@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fclone_shell_bot
+# https://github.com/cgkings/fcs
 # File Name: fqcopy.sh
 # Author: cgking
 # Created Time : 2020.7.8
@@ -24,9 +24,9 @@ echo -e "▣▣▣▣▣▣▣任务信息▣▣▣▣▣▣▣\n"
     echo -e "┋资源地址┋:$link \n"
 fi
 echo -e "▣▣▣▣▣▣▣执行转存▣▣▣▣▣▣▣"
-fclone copy "$fclone_name":{$link} "$fclone_name":{$gd_id}/"$rootname" --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fq_chercker" --transfers="$fq_transfer" --drive-pacer-min-sleep="$fq_min_sleep"ms --drive-pacer-burst="$fq_BURST" --min-size "$fq_min_size"M --check-first --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fqcopy1.log
+fclone copy "$fclone_name":{$link} "$fclone_name":{$gd_id}/"$rootname" --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fq_chercker" --transfers="$fq_transfer" --drive-pacer-min-sleep="$fq_min_sleep"ms --drive-pacer-burst="$fq_BURST" --min-size "$fq_min_size"M --check-first --log-level=ERROR --log-file=/root/fcs/log/fqcopy1.log
 echo "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  拷贝完毕"
 echo -e "▣▣▣▣▣▣查漏补缺▣▣▣▣▣▣"
-fclone copy "$fclone_name":{$link} "$fclone_name":{$gd_id}/"$rootname" --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fq_chercker" --transfers="$fq_transfer" --drive-pacer-min-sleep="$fq_min_sleep"ms --drive-pacer-burst="$fq_BURST" --min-size "$fq_min_size"M --check-first --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fqcopy2.log
+fclone copy "$fclone_name":{$link} "$fclone_name":{$gd_id}/"$rootname" --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fq_chercker" --transfers="$fq_transfer" --drive-pacer-min-sleep="$fq_min_sleep"ms --drive-pacer-burst="$fq_BURST" --min-size "$fq_min_size"M --check-first --log-level=ERROR --log-file=/root/fcs/log/fqcopy2.log
 echo "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  补缺完毕"
 exit
