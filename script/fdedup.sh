@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fclone_shell_bot
+# https://github.com/cgkings/fcs
 # File Name: fdedup.sh
 # Author: cgking
 # Created Time : 2020.7.8
@@ -19,5 +19,5 @@ else
 link=${link#*id=};link=${link#*folders/};link=${link#*d/};link=${link%?usp*}
 fi
 echo -e "▣▣▣▣▣▣正在执行查重▣▣▣▣▣▣"
-fclone dedupe smallest "$fclone_nameb":{$link2} --fast-list --drive-use-trash=false --no-traverse --checkers="$fs_chercker" --transfers="$fs_transfer" -p --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fdedupe.log --check-first
+fclone dedupe smallest "$fclone_nameb":{$link2} --fast-list --drive-use-trash=false --no-traverse --checkers="$fs_chercker" --transfers="$fs_transfer" -p --log-level=ERROR --log-file=/root/fcs/log/fdedupe.log --check-first
 echo "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  查重完毕"
