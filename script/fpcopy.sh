@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fclone_shell_bot
+# https://github.com/cgkings/fcs
 # File Name: fpcopy.sh
 # Author: cgking
 # Created Time : 2020.7.8
@@ -44,12 +44,12 @@ echo -e "┋copyto数量┋:"$file_num1"\n"
 echo -e "┋copyto大小┋:"$file_size1"\n"
 echo -e "┋转存后数量 ┋:"$file_num"\n"
 echo -e "▣▣▣▣▣▣执行转存▣▣▣▣▣▣"
-fclone copy "$fclone_name":{$link1} "$fclone_name":{$link2} --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fp_chercker" --transfers="$fp_transfer" --drive-pacer-min-sleep="$fp_min_sleep"ms --drive-pacer-burst="$fp_BURST" --min-size "$fp_min_size"M --check-first --ignore-existing --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fpcopy1.log
+fclone copy "$fclone_name":{$link1} "$fclone_name":{$link2} --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fp_chercker" --transfers="$fp_transfer" --drive-pacer-min-sleep="$fp_min_sleep"ms --drive-pacer-burst="$fp_BURST" --min-size "$fp_min_size"M --check-first --ignore-existing --log-level=ERROR --log-file=/root/fcs/log/fpcopy1.log
 echo -e "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  拷贝完毕"
 echo -e "▣▣▣▣▣▣执行补缺▣▣▣▣▣▣"
-fclone copy "$fclone_name":{$link1} "$fclone_name":{$link2} --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fp_chercker" --transfers="$fp_transfer" --drive-pacer-min-sleep="$fp_min_sleep"ms --drive-pacer-burst="$fp_BURST" --min-size "$fp_min_size"M --check-first --ignore-existing --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fpcopy2.log
+fclone copy "$fclone_name":{$link1} "$fclone_name":{$link2} --drive-server-side-across-configs --stats=1s --stats-one-line -P --checkers="$fp_chercker" --transfers="$fp_transfer" --drive-pacer-min-sleep="$fp_min_sleep"ms --drive-pacer-burst="$fp_BURST" --min-size "$fp_min_size"M --check-first --ignore-existing --log-level=ERROR --log-file=/root/fcs/log/fpcopy2.log
 echo -e "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  补缺完毕"
 echo -e "▣▣▣▣▣▣执行查重▣▣▣▣▣▣"
-fclone dedupe newest "$fclone_name":{$link2} --fast-list --size-only --drive-use-trash=false --no-traverse --checkers="$fs_chercker" --transfers="$fs_transfer" -q --log-level=ERROR --log-file=/root/fclone_shell_bot/log/fdedupe.log
+fclone dedupe newest "$fclone_name":{$link2} --fast-list --size-only --drive-use-trash=false --no-traverse --checkers="$fs_chercker" --transfers="$fs_transfer" -q --log-level=ERROR --log-file=/root/fcs/log/fdedupe.log
 echo -e "|▉▉▉▉▉▉▉▉▉▉▉▉|100%  查重完毕"
 exit
