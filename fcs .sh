@@ -82,7 +82,7 @@ install_script() {
     echo -e "alias fd="~/fcs/script/fdedup.sh""  >> /root/.bashrc
     echo -e "alias fc="~/fcs/script/fcheck.sh""  >> /root/.bashrc
     echo -e "alias fcl="~/fcs/script/fcleanup.sh""  >> /root/.bashrc
-    echo -e "alias fcshell="~/fcshell.sh""  >> /root/.bashrc
+    echo -e "alias fcs="~/fcs.sh""  >> /root/.bashrc
     echo -e "alias avdc='cd /home/gdrive/test && AV_Data_Capture'"  >> /root/.bashrc
     source /root/.bashrc
     echo -e "已完成安装，并设置系统级脚本别名"
