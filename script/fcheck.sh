@@ -1,6 +1,6 @@
 #!/bin/bash
 #=============================================================
-# https://github.com/cgkings/fclone_shell_bot
+# https://github.com/cgkings/fcs
 # File Name: fcheck.sh
 # Author: cgking
 # Created Time : 2020.7.8
